@@ -1,0 +1,36 @@
+.prompt {
+  color: orange;
+}
+.badge-success {
+  background-color: green;
+  border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+  box-shadow: 1px 1px 1px black;
+  color: white;
+  font-weight: bold;
+  height: 18px;
+  padding: 2px 4px;
+  text-align: center;
+  min-width: 14px;
+}
+.badge-error {
+  background-color: red;
+  border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+  box-shadow: 1px 1px 1px black;
+  color: white;
+  font-weight: bold;
+  height: 18px;
+  padding: 2px 4px;
+  text-align: center;
+  min-width: 14px;
+}
+.badge-zero {
+  background-color: silver;
+  border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+  box-shadow: 1px 1px 1px black;
+  color: white;
+  font-weight: bold;
+  height: 18px;
+  padding: 2px 4px;
+  text-align: center;
+  min-width: 14px;
+}

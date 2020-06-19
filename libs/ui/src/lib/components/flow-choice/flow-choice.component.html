@@ -1,0 +1,25 @@
+<tr [formGroup]="choiceGroup">
+  <!-- check -->
+  <td>
+    <mat-checkbox formControlName="checked" value="choice?.number">{{
+      choice.label
+    }}</mat-checkbox>
+  </td>
+  <!-- <td *ngIf="!multiple">
+    <mat-radio-button formControlName="checked" name="checked" [(ngModel)]="choice.checked" name="choices" value="choice.number">{{choice.label}}</mat-radio-button>
+  </td> -->
+
+  <!-- free content* -->
+  <td *ngIf="choice?.isFree">
+    <mat-form-field>
+      <textarea
+        matInput
+        formControlName="content"
+        maxlength="1000"
+        placeholder="answer"
+      ></textarea>
+      <mat-error *ngIf="content.hasError('content') && content.touched">please type an answer</mat-error>
+      <mat-error *ngIf="content.hasError('pattern') && content.touched">invalid answer</mat-error>
+    </mat-form-field>
+  </td>
+</tr>

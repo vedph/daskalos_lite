@@ -1,0 +1,63 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ summary.label }}</mat-card-title>
+    <mat-card-subtitle [ngClass]="success ? 'badge-success' : 'badge-error'">
+      {{ success ? 'SUCCESS' : 'FAILURE' }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      You scored
+      <span [ngClass]="success ? 'badge-success' : 'badge-error'">{{
+        score
+      }}</span
+      >. The minimum score was {{ summary.minScore }}.
+    </p>
+    <div *ngFor="let step of summary.steps">
+      <h3>[{{ step.number }}] {{ step.label }}</h3>
+      <p class="prompt">{{ step.prompt }}</p>
+      <div *ngIf="!step.isFree">
+        <ul>
+          <li *ngFor="let choice of step.choices">
+            <span>{{ choice.label }}</span>
+            <span
+              *ngIf="choice.checked"
+              style="margin-left: 1em"
+              [ngClass]="{
+                'badge-success': choice.score > 0,
+                'badge-error': choice.score < 0,
+                'badge-zero': choice.score === 0
+              }"
+              >{{ choice.score }}</span
+            >
+
+            <!-- <span *ngIf="choice.score === 0 || !choice.checked">{{
+              choice.label
+            }}</span>
+            <span
+              *ngIf="choice.score < 0 && choice.checked"
+              matBadge="{{ choice.score }}"
+              matBadgeColor="warn"
+              matBadgeOverlap="false"
+              >{{ choice.label }}</span
+            >
+            <span
+              *ngIf="choice.score > 0 && choice.checked"
+              matBadge="{{ choice.score }}"
+              matBadgeOverlap="false"
+              >{{ choice.label }}</span
+            > -->
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="step.choices[0]?.isFree">
+        <p>{{step.choices[0].freeContent</p>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <a type="button" mat-button [routerLink]="['/flows', summary.id]">
+      Repeat the quiz
+    </a>
+  </mat-card-actions>
+</mat-card>

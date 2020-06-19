@@ -1,0 +1,11 @@
+[
+  {
+    "id": "demo",
+    "label": "Demo Quiz",
+    "description": "A fake demo quiz",
+    "author": "Daniele Fusi",
+    "category": "demo",
+    "lastUpdated": "2020-05-13T15:00:00Z+01:00",
+    "minScore": 3
+  }
+]

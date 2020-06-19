@@ -1,0 +1,75 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      {{ step?.number }} - {{ step?.label }}
+      <span *ngIf="timeRunning" id="timer">{{ timerMessage }}</span>
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content *ngIf="step">
+    <p>{{ step.prompt }}</p>
+    <div *ngIf="step.content" [innerHtml]="step.content | safe: 'html'"></div>
+    <hr />
+
+    <!-- single-choice -->
+    <div *ngIf="step.maxChoices === 1 && step.choices?.length" [formGroup]="stepGroup">
+      <mat-radio-group formControlName="radioChoice">
+        <table formArrayName="choices">
+          <tbody>
+            <tr
+              *ngFor="let c of choiceArray.controls; let i = index"
+              [formGroupName]="i"
+            >
+              <mat-radio-button [value]="i.toString()">{{
+                step.choices[i].label
+              }}</mat-radio-button>
+            </tr>
+          </tbody>
+        </table>
+      </mat-radio-group>
+    </div>
+
+    <!-- multiple-choices -->
+    <div *ngIf="step.maxChoices > 1 && step.choices?.length" [formGroup]="stepGroup">
+      <table formArrayName="choices">
+        <tbody>
+          <tr
+            *ngFor="let c of choiceArray.controls; let i = index"
+            [formGroupName]="i"
+          >
+            <mat-checkbox formControlName="checked">
+              {{ step.choices[i].label }}
+            </mat-checkbox>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      matTooltip="Move to previous"
+      *ngIf="canStepBack"
+      (click)="onStepBack()"
+    >
+      <mat-icon>navigate_before</mat-icon>
+    </button>
+    <button
+      mat-raised-button
+      color="warn"
+      matTooltip="Stop this flow"
+      (click)="onStop()"
+    >
+      <mat-icon>cancel</mat-icon>
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      matTooltip="Move to next"
+      (click)="onStepForward()"
+    >
+      <mat-icon>navigate_next</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,9 @@
+span#timer {
+  margin-left: 1em;
+  display: inline-block;
+  color: red;
+}
+li {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}

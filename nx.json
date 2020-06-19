@@ -1,0 +1,48 @@
+{
+  "npmScope": "daskalos",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "daskalos": {
+      "tags": []
+    },
+    "daskalos-e2e": {
+      "tags": [],
+      "implicitDependencies": ["daskalos"]
+    },
+    "core": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
+    },
+    "features-flow-run": {
+      "tags": []
+    },
+    "features-flow-summary": {
+      "tags": []
+    }
+  }
+}

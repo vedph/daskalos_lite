@@ -1,0 +1,6 @@
+div.flow-label {
+  margin: 0 16px 0 16px;
+  border-bottom: 1px solid silver;
+  color: gray;
+  font-style: italic;
+}

@@ -1,0 +1,311 @@
+{
+  "version": 1,
+  "projects": {
+    "daskalos": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/daskalos",
+      "sourceRoot": "apps/daskalos/src",
+      "prefix": "daskalos",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/daskalos",
+            "index": "apps/daskalos/src/index.html",
+            "main": "apps/daskalos/src/main.ts",
+            "polyfills": "apps/daskalos/src/polyfills.ts",
+            "tsConfig": "apps/daskalos/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/daskalos/src/favicon.ico",
+              "apps/daskalos/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/daskalos/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/daskalos/src/environments/environment.ts",
+                  "with": "apps/daskalos/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "daskalos:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "daskalos:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "daskalos:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/daskalos/tsconfig.app.json",
+              "apps/daskalos/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/daskalos/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/daskalos/jest.config.js",
+            "tsConfig": "apps/daskalos/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/daskalos/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "daskalos-e2e": {
+      "root": "apps/daskalos-e2e",
+      "sourceRoot": "apps/daskalos-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/daskalos-e2e/cypress.json",
+            "tsConfig": "apps/daskalos-e2e/tsconfig.e2e.json",
+            "devServerTarget": "daskalos:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "daskalos:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/daskalos-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/daskalos-e2e/**/*"]
+          }
+        }
+      }
+    },
+    "core": {
+      "projectType": "library",
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "prefix": "daskalos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/tsconfig.lib.json",
+              "libs/core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "tsConfig": "libs/core/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/core/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "api": {
+      "projectType": "library",
+      "root": "libs/api",
+      "sourceRoot": "libs/api/src",
+      "prefix": "daskalos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/api/tsconfig.lib.json",
+              "libs/api/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/api/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/jest.config.js",
+            "tsConfig": "libs/api/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/api/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "ui": {
+      "projectType": "library",
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "prefix": "daskalos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui/tsconfig.lib.json",
+              "libs/ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui/jest.config.js",
+            "tsConfig": "libs/ui/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "material": {
+      "projectType": "library",
+      "root": "libs/material",
+      "sourceRoot": "libs/material/src",
+      "prefix": "daskalos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/material/tsconfig.lib.json",
+              "libs/material/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/material/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/material/jest.config.js",
+            "tsConfig": "libs/material/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/material/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "features-flow-run": {
+      "projectType": "library",
+      "root": "libs/features/flow-run",
+      "sourceRoot": "libs/features/flow-run/src",
+      "prefix": "daskalos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/features/flow-run/tsconfig.lib.json",
+              "libs/features/flow-run/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/features/flow-run/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/features/flow-run/jest.config.js",
+            "tsConfig": "libs/features/flow-run/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/features/flow-run/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "features-flow-summary": {
+      "projectType": "library",
+      "root": "libs/features/flow-summary",
+      "sourceRoot": "libs/features/flow-summary/src",
+      "prefix": "daskalos",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/features/flow-summary/tsconfig.lib.json",
+              "libs/features/flow-summary/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/features/flow-summary/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/features/flow-summary/jest.config.js",
+            "tsConfig": "libs/features/flow-summary/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/features/flow-summary/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "daskalos"
+}

@@ -1,0 +1,8 @@
+<div class="flow-label">{{ flow?.label }}</div>
+<daskalos-flow-step
+  [step]="step"
+  [canStepBack]="canStepBack"
+  (stepBack)="onStepBack($event)"
+  (stepForward)="onStepForward($event)"
+  (stop)="onStop($event)"
+></daskalos-flow-step>

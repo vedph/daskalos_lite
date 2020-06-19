@@ -1,0 +1,182 @@
+{
+  "id": "demo",
+  "label": "Demo Quiz",
+  "description": "A fake demo quiz",
+  "author": "Daniele Fusi",
+  "category": "demo",
+  "lastUpdated": "2020-05-13T15:00:00Z+01:00",
+  "minScore": 3,
+  "steps": [
+    {
+      "number": 1,
+      "label": "Demo Overview",
+      "content": "<div style=\"column-width: 20em;\"><img src=\"http://www.clker.com/cliparts/H/0/c/9/e/2/quiz-th.png\" alt=\"Quiz\" style=\"float:left;margin: 4px 16px;width:64px\"/>Welcome to the Daskalos quiz mini-demo. Daskalos quizzes are built on a minimalist approach, to provide easy to run quizzes in a simple web browser, without any backend. Each quiz is fed by a simple JSON file. Daskalos quizzes allow custom HTML content, questions with timeout, single or multiple answers, custom answers scoring, and flow branching. A quiz flows through a sequence of steps. Each step has any number of choices. Each choice gives its own contribution to the final score, defined as a number which can be either positive or negative. The quiz is passed when the total score (=the sum of the scores of all the selected choices) is greater than or equal to the minimum score defined for it.</div>",
+      "prompt": "Click the next button when ready."
+    },
+    {
+      "number": 2,
+      "label": "Dogs",
+      "content": "<div style=\"column-width: 20em;\"><img src=\"http://www.clker.com/cliparts/8/1/3/6/12161396651491232743lemmling_Cartoon_dog.svg.thumb.png\" alt=\"Dog\" style=\"float:left;margin: 4px 16px;width:64px\"/><strong>Attention!</strong>: your time is limited. Quiz creators can specify a time-limited question by simply setting the <em>number of seconds</em> allowed before the quiz automatically skips to the step defined as the <em>next step after a timeout</em>.</div>",
+      "prompt": "How do dogs do?",
+      "maxChoices": 1,
+      "timeAllotted": 30,
+      "expiredTarget": 3,
+      "choices": [
+        {
+          "score": 1,
+          "targetStepNumber": 3,
+          "label": "bark!"
+        },
+        {
+          "score": -1,
+          "targetStepNumber": 3,
+          "label": "meow!"
+        },
+        {
+          "score": -1,
+          "targetStepNumber": 3,
+          "label": "quack!"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "label": "Cats",
+      "prompt": "How do cats do?",
+      "content": "<img src=\"http://www.clker.com/cliparts/e/c/2/c/11954410851373638183Gerald_G_Cartoon_Cat_Sitting.svg.thumb.png\" alt=\"Cat\"/>",
+      "timeAllotted": 30,
+      "expiredTarget": 4,
+      "choices": [
+        {
+          "score": 1,
+          "targetStepNumber": 4,
+          "label": "bark!"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 4,
+          "label": "meow!"
+        },
+        {
+          "score": -1,
+          "targetStepNumber": 4,
+          "label": "squit!"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "label": "Choose a realm",
+      "prompt": "Which realm do you prefer?",
+      "content": "<p>This step shows flow branching. According to your choice here, you will follow two different branches in the quiz, each with its own set of questions. Follow the <em>sea</em> step to see an example of a multiple-answers question. By branching according to the user's choices, you can build up a very customized and thorough quiz, which 'reacts' to the user's answers, and changes its questions accordingly. This is like combining a branching flow diagram with a wizard-like quiz.</p>",
+      "choices": [
+        {
+          "targetStepNumber": 5,
+          "label": "air"
+        },
+        {
+          "targetStepNumber": 7,
+          "label": "sea"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "label": "Air - Bats",
+      "prompt": "When do bats sleep?",
+      "timeAllotted": 30,
+      "expiredTarget": 6,
+      "choices": [
+        {
+          "targetStepNumber": 6,
+          "label": "at day",
+          "score": 1
+        },
+        {
+          "targetStepNumber": 6,
+          "label": "at night",
+          "score": -1
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "label": "Air - Owls",
+      "prompt": "Which city had an owl on its coin?",
+      "timeAllotted": 30,
+      "expiredTarget": 0,
+      "choices": [
+        {
+          "targetStepNumber": 0,
+          "label": "Sparta",
+          "score": -1
+        },
+        {
+          "targetStepNumber": 0,
+          "label": "Athens",
+          "score": 1
+        },
+        {
+          "targetStepNumber": 0,
+          "label": "Thebae",
+          "score": -1
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "label": "Sea - Sharks",
+      "prompt": "Do sharks eat fishes?",
+      "timeAllotted": 30,
+      "expiredTarget": 8,
+      "choices": [
+        {
+          "targetStepNumber": 8,
+          "label": "no",
+          "score": -1
+        },
+        {
+          "targetStepNumber": 8,
+          "label": "yes",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "label": "Sea - Octopus",
+      "prompt": "What do octopus eat?",
+      "timeAllotted": 35,
+      "expiredTarget": 0,
+      "content": "<p>Check <strong>all</strong> the answers that apply. This is a multiple-answers question sample.</p>",
+      "maxChoices": 4,
+      "choices": [
+        {
+          "targetStepNumber": 0,
+          "label": "shrimps",
+          "score": 0.25
+        },
+        {
+          "targetStepNumber": 0,
+          "label": "lobsters",
+          "score": 0.25
+        },
+        {
+          "targetStepNumber": 0,
+          "label": "carrots",
+          "score": -1
+        },
+        {
+          "targetStepNumber": 0,
+          "label": "snails",
+          "score": 0.25
+        },
+        {
+          "targetStepNumber": 0,
+          "label": "crabs",
+          "score": 0.25
+        }
+      ]
+    }
+  ]
+}

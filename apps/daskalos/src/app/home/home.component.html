@@ -1,0 +1,73 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Daskalos</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <article>
+      <p>
+        Welcome to the Daskalos demo. This small web application shows Daskalos
+        quizzes, a lightweight type of interactive online quiz designed to be
+        used in self-evaluation in environments without a backend. All what is
+        required to run this demo is a web server.
+      </p>
+      <p>
+        To start with the demo, just click the <code>Demo</code> button above.
+      </p>
+      <h2>Overview</h2>
+      <h3>Flow</h3>
+      <p>
+        A Daskalos quiz is structured as a flow including any number of steps.
+        Each flow has these metadata:
+      </p>
+      <ul>
+        <li><code>id</code>: a unique textual ID for the flow.</li>
+        <li><code>label</code>: the flow's label.</li>
+        <li><code>description</code>: a short description.</li>
+        <li><code>author</code>: the flow's author(s).</li>
+        <li><code>category</code>: the flow's category.</li>
+        <li>
+          <code>lastUpdated</code>: date and time the flow was last updated.
+        </li>
+        <li>
+          <code>minScore</code>: the minimum score to be reached by a quiz user
+          to pass it.
+        </li>
+        <li><code>steps</code>: 1 or more steps.</li>
+      </ul>
+      <h3>Step</h3>
+      <p>
+        Each step contains any number of choices, plus these metadata (those
+        marked with an asterisk are required, all the others are optional):
+      </p>
+      <ul>
+        <li><code>number</code>*: the step number.</li>
+        <li><code>label</code>*: the step label.</li>
+        <li><code>prompt</code>*: the step prompt.</li>
+        <li><code>content</code>: HTML-based content for the step.</li>
+        <li>
+          <code>maxChoices</code>: the maximum number of choices allowed to be
+          selected. The default value is 1.
+        </li>
+        <li>
+          <code>timeAllotted</code>: the maximum time, in seconds, allowed
+          before the quiz automatically moves to the next step. When set, this
+          makes the question time-limited.
+        </li>
+        <li>
+          <code>expiredTarget</code>: the number of the target step to move to
+          when the allotted time has expired.
+        </li>
+        <li><code>choices</code>: any number of choices.</li>
+      </ul>
+      <h3>Choice</h3>
+      <p>A choice is a single choice the user can select in each step. Each choice has the following properties:</p>
+      <ul>
+        <li><code>targetStepNumber</code>: the number of the step to go to when the choice is selected. This allows for branching, i.e. selecting different paths in the flow according to user answers.</li>
+        <li><code>label</code>: the choice's label.</li>
+        <li><code>score</code>: the choice score. This is a number, either positive or negative, which is added to the flow's total score when this choice is selected.</li>
+      </ul>
+    </article>
+  </mat-card-content>
+</mat-card>

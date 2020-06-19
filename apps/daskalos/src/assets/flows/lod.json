@@ -1,0 +1,486 @@
+{
+  "id": "lod",
+  "label": "LOD Quiz",
+  "description": "A Self-Test on the LOD VeDPH Summer Camp lesson",
+  "author": "Daniele Fusi",
+  "category": "text",
+  "lastUpdated": "2020-06-19T00:00:00Z+01:00",
+  "minScore": 12,
+  "steps": [
+    {
+      "number": 1,
+      "label": "LOD Self-Test",
+      "content": "<a href='https://www.unive.it/pag/39287' target='_blank'><img src='https://www.unive.it/pag/fileadmin/user_upload/centri/VeDPH/img/grafica/VeDPH_logo.png' width='300' alt='VeDPH'></a>",
+      "prompt": "Welcome to the LOD self-test for the VeDPH Summer School",
+      "maxChoices": 1,
+      "choices": []
+    },
+    {
+      "number": 2,
+      "label": "Structuring Data",
+      "content": "",
+      "prompt": "In Berners-Lee 5-stars system, tabular data in a format like CSV get 1 star more than XLS, because:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 3,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 3,
+          "label": "it's text"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 3,
+          "label": "it's a standard format"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 3,
+          "label": "it's a popular format"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "label": "Distributing Data",
+      "content": "",
+      "prompt": "Which of these distribution strategies for tabular data could be related to a triple?",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 4,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 4,
+          "label": "by rows"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 4,
+          "label": "by columns"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 4,
+          "label": "by cells"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "label": "URIs in Triples",
+      "content": "",
+      "prompt": "URIs are always attached to these terms of a triple:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 5,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 5,
+          "label": "subject, predicate, object"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 5,
+          "label": "subject, predicate"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 5,
+          "label": "subject, object"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "label": "URIs in Triples",
+      "content": "",
+      "prompt": "Is each resource always identified by a single URI?",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 6,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 6,
+          "label": "yes"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 6,
+          "label": "no"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 6,
+          "label": "only when that URI can be dereferenced"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "label": "URIs in Triples",
+      "content": "",
+      "prompt": "The URI linked to a resource:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 7,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 7,
+          "label": "always points to an existing page"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 7,
+          "label": "might point to an existing page"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 7,
+          "label": "never points to an existing page"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "label": "Literals in Triples",
+      "content": "",
+      "prompt": "Literal values can appear in these terms of a triple:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 8,
+      "choices": [
+        {
+          "score": 1,
+          "targetStepNumber": 8,
+          "label": "object"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 8,
+          "label": "subject, predicate, object"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 8,
+          "label": "subject, object"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "label": "Literals in Triples",
+      "content": "",
+      "prompt": "Is the literal value in a triple always a string?",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 9,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 9,
+          "label": "yes"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 9,
+          "label": "no"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "label": "Literals in Triples",
+      "content": "",
+      "prompt": "Which is the language used for string literal values?",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 10,
+      "choices": [
+        {
+          "score": 1,
+          "targetStepNumber": 10,
+          "label": "always English"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 10,
+          "label": "preferably English"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 10,
+          "label": "any language"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "label": "LOD Vocabularies",
+      "content": "",
+      "prompt": "The same concept:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 11,
+      "choices": [
+        {
+          "score": 1,
+          "targetStepNumber": 11,
+          "label": "can be defined in different vocabularies"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 11,
+          "label": "can never be defined in different vocabularies"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 11,
+          "label": "can be defined in different vocabularies provided that their creators agree on it"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "label": "Triple Graphs",
+      "content": "",
+      "prompt": "Different triple graphs can be merged:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 12,
+      "choices": [
+        {
+          "score": 1,
+          "targetStepNumber": 12,
+          "label": "always"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 12,
+          "label": "only when they are not inconsistent"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 12,
+          "label": "only when we can ensure that data about their topics is complete"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "label": "RDF Serialization",
+      "content": "",
+      "prompt": "How is RDF serialized?",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 13,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 13,
+          "label": "only with an XML dialect"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 13,
+          "label": "only with an XML dialect or JSON"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 13,
+          "label": "with a number of technologies including XML and JSON"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "label": "RDF Serialization",
+      "content": "",
+      "prompt": "In a qname in the FOAF vocabulary, the prefix:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 14,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 14,
+          "label": "must always be 'foaf:'"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 14,
+          "label": "in most cases, conventionally is 'foaf:'"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "label": "RDFS",
+      "content": "Check all the options that apply.",
+      "prompt": "In dbo:Marco_Polo a foaf:Person:",
+      "maxChoices": 2,
+      "timeAllotted": 120,
+      "expiredTarget": 15,
+      "choices": [
+        {
+          "score": 0.5,
+          "targetStepNumber": 15,
+          "label": "foaf:Person is a class"
+        },
+        {
+          "score": 0.5,
+          "targetStepNumber": 15,
+          "label": "dbo:Marco_Polo is an instance"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 15,
+          "label": "dbo:Marco_Polo is a class"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "label": "RDFS",
+      "content": "",
+      "prompt": "The implication of dbo:Marco_Polo a foaf:Person is:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 16,
+      "choices": [
+        {
+          "score": 1,
+          "targetStepNumber": 16,
+          "label": "dbo:Marco_Polo a rdfs:Resource"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 16,
+          "label": "dbo:Marco_Polo is a yago:ExplorerOfAsia"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "label": "RDFS",
+      "content": "",
+      "prompt": "The triple x:hasFather rdfs:domain foaf:Person means that:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 17,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 17,
+          "label": "the object of x:hasFather must be a person"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 17,
+          "label": "the subject of x:hasFather must be a person"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "label": "OWL",
+      "content": "",
+      "prompt": "OWL is:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 18,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 18,
+          "label": "a new technology which supercedes the older RDF"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 18,
+          "label": "a subset of RDF"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 18,
+          "label": "a superset of RDF"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "label": "Inferencing",
+      "content": "",
+      "prompt": "For inference to happen:",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 19,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 19,
+          "label": "data must be complete"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 19,
+          "label": "in good practice, data should be complete"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 19,
+          "label": "data will not need to be complete, nor it will ever be"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "label": "OWL",
+      "content": "<p>x:hasFather a owl:FunctionalProperty.</p><p>dbr:Marco_Polo x:hasFather</p><p>dbr:Niccolò_Polo, x:N_Polo.</p>",
+      "prompt": "Given these triples merged from different graphs, what's the right inference?",
+      "maxChoices": 1,
+      "choices": [
+        {
+          "score": 0,
+          "targetStepNumber": 20,
+          "label": "the graphs are in contradiction"
+        },
+        {
+          "score": 1,
+          "targetStepNumber": 20,
+          "label": "dbr:Niccolò_Polo owl:sameAs x:N_Polo"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "label": "RDF",
+      "content": "",
+      "prompt": "Can RDF data enrich traditional HTML pages?",
+      "maxChoices": 1,
+      "timeAllotted": 120,
+      "expiredTarget": 0,
+      "choices": [
+        {
+          "score": 1,
+          "targetStepNumber": 0,
+          "label": "yes"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 0,
+          "label": "no"
+        },
+        {
+          "score": 0,
+          "targetStepNumber": 0,
+          "label": "only when they refer to a single vocabulary"
+        }
+      ]
+    }
+  ]
+}
