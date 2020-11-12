@@ -89,9 +89,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/daskalos/jest.config.js",
-            "tsConfig": "apps/daskalos/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "apps/daskalos/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       }
@@ -143,9 +141,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/core/jest.config.js",
-            "tsConfig": "libs/core/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/core/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       },
@@ -171,9 +167,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/api/jest.config.js",
-            "tsConfig": "libs/api/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/api/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       },
@@ -199,9 +193,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/ui/jest.config.js",
-            "tsConfig": "libs/ui/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/ui/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       },
@@ -227,9 +219,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/material/jest.config.js",
-            "tsConfig": "libs/material/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/material/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       },
@@ -255,9 +245,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/features/flow-run/jest.config.js",
-            "tsConfig": "libs/features/flow-run/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/features/flow-run/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       },
@@ -286,9 +274,7 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/features/flow-summary/jest.config.js",
-            "tsConfig": "libs/features/flow-summary/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/features/flow-summary/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       },

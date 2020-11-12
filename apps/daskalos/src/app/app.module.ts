@@ -39,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
             )
         }
       ],
-      { useHash: true }
+      { useHash: true, relativeLinkResolution: 'legacy' }
     ),
     CoreModule,
     MaterialModule,
